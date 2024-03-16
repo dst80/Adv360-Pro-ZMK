@@ -63,9 +63,9 @@
 
     symbols {
       bindings = <
-        &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                       &none &kp RS(RA(C)) &kp RA(N5) &kp RS(RA(V))  &kp RA(N9)    &kp RA(N0)    &kp RA(S) 
+        &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                       &none &kp RS(RA(C)) &kp RA(N5) &kp RS(RA(V))  &kp RA(N9)    &kp RA(N0)     &kp RA(S) 
         &none &kp AT         &kp GRAVE     &kp LBKT       &kp RBKT     &kp CARET    &none                                       &none &kp EXCL      &kp LT     &kp GT         &kp EQUAL     &kp AMPS       &none 
-        &none &kp BSLH       &kp FSLH      &kp LBRC       &kp RBRC     &kp UNDER    &none        &none &none &none &none        &none &kp QMARK     &kp LPAR   &kp RPAR       &kp SEMI      &kp COLON      &none 
+        &none &mt LGUI BSLH  &mt LALT FSLH &mt LCTRL LBRC &kp RBRC     &kp UNDER    &none        &none &none &none &none        &none &kp QMARK     &kp LPAR   &mt RCTRL RPAR &mt RALT SEMI &mt RGUI COLON &none 
         &none &kp HASH       &kp DLLR      &kp PIPE       &kp TILDE    &kp STAR                        &none &none                    &kp PLUS      &kp PRCNT  &kp DQT        &kp APOS      &kp MINUS      &none 
         &none &none          &none         &none          &none                           &none &trans &none &none &trans &none                     &none      &none          &none         &none          &none
       >;
