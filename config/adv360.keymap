@@ -60,9 +60,11 @@
         &mo FNDL  &kp GRAVE  &none      &kp LEFT    &kp RIGHT                &mt LSHFT BSPC &lt SYM DEL &mt LALT HOME &mt RALT END &lt SYM ENTER &mt RSHFT SPACE                 &kp UP      &kp DOWN    &kp LBKT   &kp RBKT      &mo FNDL
       >;
     };
+
+    // &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                       &none &kp RS(RA(C)) &kp RA(N5) &kp RS(RA(V))  &kp RA(N9)    &kp RA(N10)    &kp RA(S) 
     symbols {
       bindings = <
-        &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                       &none &kp RS(RA(C)) &kp RA(N5) &kp RS(RA(V))  &kp RA(N9)    &kp RA(N10)    &kp RA(S) 
+        &none &none          &none           &none        &none        &none        &none                                       &trans &none  &none        &none        &none       &none       &none
         &none &kp AT         &kp GRAVE     &kp LBKT       &kp RBKT     &kp CARET    &none                                       &none &kp EXCL      &kp LT     &kp GT         &kp EQUAL     &kp AMPS       &none 
         &none &kp BSLH       &kp FSLH      &kp LBRC       &kp RBRC     &kp UNDER    &none        &none &none &none &none        &none &kp QMARK     &kp LPAR   &kp RPAR       &kp SEMI      &kp COLON      &none 
         &none &kp HASH       &kp DLLR      &kp PIPE       &kp TILDE    &kp STAR                        &none &none                    &kp PLUS      &kp PRCNT  &kp DQT        &kp APOS      &kp MINUS      &none 
