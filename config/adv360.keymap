@@ -18,7 +18,7 @@
     quick-tap-ms = <200>;
 };
 
-#define DVORAK 1
+#define COLEMAK 1
 #define SYM 2
 #define FNDL 3
 #define KEYB 4
@@ -52,48 +52,48 @@
 
     default_layer {
       bindings = <
-        &kp EQUAL &kp N1     &kp N2     &kp N3      &kp N4      &kp N5 &tog DVORAK                                                                               &mo KEYB &kp N6 &kp N7      &kp N8      &kp N9     &kp N0        &kp MINUS
+        &kp EQUAL &kp N1     &kp N2     &kp N3      &kp N4      &kp N5 &tog COLEMAK                                                                              &mo KEYB &kp N6 &kp N7      &kp N8      &kp N9     &kp N0        &kp MINUS
         &kp TAB   &kp Q      &kp W      &kp E       &kp R       &kp T  &none                                                                                     &none    &kp Y  &kp U       &kp I       &kp O      &kp P         &kp BSLH
         &kp ESC   &hr LGUI A &hr LALT S &hr LCTRL D &hr LSHFT F &kp G  &none                &kp LCTRL   &kp LALT      &kp LGUI     &kp RCTRL                     &none    &kp H  &hr RSHFT J &hr RCTRL K &hr RALT L &hr RGUI SEMI &kp SQT
         &kp LSHFT &kp Z      &kp X      &kp C       &kp V       &kp B                                   &kp PG_UP     &kp PG_DN                                           &kp N  &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
         &mo FNDL  &kp GRAVE  &none      &kp LEFT    &kp RIGHT                &mt LSHFT BSPC &lt SYM DEL &mt LALT HOME &mt RALT END &lt SYM ENTER &mt RSHFT SPACE                 &kp UP      &kp DOWN    &kp LBKT   &kp RBKT      &mo FNDL
       >;
     };
-    dvorak {
+    colemak {
       bindings = <
-        &kp EQUAL &kp N1     &kp N2     &kp N3      &kp N4      &kp N5 &trans                                                                                    &mo KEYB &kp N6 &kp N7      &kp N8      &kp N9     &kp N0        &kp MINUS
-        &kp TAB   &kp SQT    &kp COMMA  &kp DOT     &kp P       &kp Y  &none                                                                                     &none    &kp F  &kp G       &kp C       &kp R      &kp L         &kp BSLH
-        &kp ESC   &hr LGUI A &hr LALT O &hr LCTRL E &hr LSHFT U &kp I  &none                &kp LCTRL   &kp LALT      &kp LGUI     &kp RCTRL                     &none    &kp D  &hr RSHFT H &hr RCTRL T &hr RALT N &hr RGUI S    &kp FSLH
-        &kp LSHFT &kp SEMI   &kp Q      &kp J       &kp K       &kp X                                   &kp PG_UP     &kp PG_DN                                           &kp B  &kp M       &kp W       &kp V      &kp Z         &kp RSHFT
-        &mo FNDL  &kp GRAVE  &none      &kp LEFT    &kp RIGHT                &mt LSHFT BSPC &lt SYM DEL &mt LALT HOME &mt RALT END &lt SYM ENTER &mt RSHFT SPACE                 &kp UP      &kp DOWN    &kp LBKT   &kp RBKT      &mo FNDL
+        &kp EQUAL &kp N1     &kp N2     &kp N3      &kp N4      &kp N5 &tog COLEMAK                                                                              &mo KEYB &kp N6 &kp N7      &kp N8      &kp N9     &kp N0     &kp MINUS
+        &kp TAB   &kp Q      &kp W      &kp F       &kp P       &kp G  &none                                                                                     &none    &kp K  &kp L       &kp U       &kp Y      &kp SEMI   &kp BSLH
+        &kp ESC   &hr LGUI A &hr LALT R &hr LCTRL S &hr LSHFT T &kp D  &none                &kp LCTRL   &kp LALT      &kp LGUI     &kp RCTRL                     &none    &kp H  &hr RSHFT N &hr RCTRL E &hr RALT I &hr RGUI O &kp SQT
+        &kp LSHFT &kp Z      &kp X      &kp C       &kp V       &kp B                                   &kp PG_UP     &kp PG_DN                                           &kp J  &kp M       &kp COMMA   &kp DOT    &kp FSLH   &kp RSHFT
+        &mo FNDL  &kp GRAVE  &none      &kp LEFT    &kp RIGHT                &mt LSHFT BSPC &lt SYM DEL &mt LALT HOME &mt RALT END &lt SYM ENTER &mt RSHFT SPACE                 &kp UP      &kp DOWN    &kp LBKT   &kp RBKT   &mo FNDL
       >;
     };
 
     symbols {
       bindings = <
-        &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                       &none &kp RS(RA(C)) &kp RA(N5) &kp RS(RA(V))  &kp RA(N9)    &kp RA(N0)     &kp RA(S) 
-        &none &kp AT         &kp GRAVE     &kp LBKT       &kp RBKT     &kp CARET    &none                                       &none &kp EXCL      &kp LT     &kp GT         &kp EQUAL     &kp AMPS       &none 
-        &none &hr LGUI BSLH  &hr LALT FSLH &hr LCTRL LBRC &kp RBRC     &kp UNDER    &none        &none &none &none &none        &none &kp QMARK     &kp LPAR   &hr RCTRL RPAR &hr RALT SEMI &hr RGUI COLON &none 
-        &none &kp HASH       &kp DLLR      &kp PIPE       &kp TILDE    &kp STAR                        &none &none                    &kp PLUS      &kp PRCNT  &kp DQT        &kp APOS      &kp MINUS      &none 
+        &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                       &none &kp RS(RA(C)) &kp RA(N5) &kp RS(RA(V))  &kp RA(N9)    &kp RA(N0)     &kp RA(S)
+        &none &kp AT         &kp GRAVE     &kp LBKT       &kp RBKT     &kp CARET    &none                                       &none &kp EXCL      &kp LT     &kp GT         &kp EQUAL     &kp AMPS       &none
+        &none &hr LGUI BSLH  &hr LALT FSLH &hr LCTRL LBRC &kp RBRC     &kp UNDER    &none        &none &none &none &none        &none &kp QMARK     &kp LPAR   &hr RCTRL RPAR &hr RALT SEMI &hr RGUI COLON &none
+        &none &kp HASH       &kp DLLR      &kp PIPE       &kp TILDE    &kp STAR                        &none &none                    &kp PLUS      &kp PRCNT  &kp DQT        &kp APOS      &kp MINUS      &none
         &none &none          &none         &none          &none                           &none &trans &none &none &trans &none                     &none      &none          &none         &none          &none
       >;
     };
     fn {
       bindings = <
         &none  &none       &none       &none        &none        &none  &none                                          &trans &none  &none        &none        &none       &none       &none
-        &trans &kp F1      &kp F2      &kp F3       &kp F4       &kp F5 &none                                          &none  &kp F6 &kp F7       &kp F8       &kp F9      &kp F10     &none
-        &trans &hr LGUI N1 &hr LALT N2 &hr LCTRL N3 &hr LSHFT N4 &kp N5 &none        &none  &none  &none  &none        &none  &kp N6 &hr RSHFT N7 &hr RCTRL N8 &hr RALT N9 &hr RGUI N0 &none
-        &trans &kp F11     &kp F12     &none        &none        &none                      &none  &none                      &none  &none        &none        &none       &none       &trans
-        &none  &none       &none       &none        &none                     &none  &none  &none  &none  &none  &none               &none        &none        &none       &none       &none
+        &none  &kp F1      &kp F2      &kp F3       &kp F4       &kp F5 &none                                          &none  &kp F6 &kp F7       &kp F8       &kp F9      &kp F10     &none
+        &none  &hr LGUI N1 &hr LALT N2 &hr LCTRL N3 &hr LSHFT N4 &kp N5 &none        &none  &none  &none  &none        &none  &kp N6 &hr RSHFT N7 &hr RCTRL N8 &hr RALT N9 &hr RGUI N0 &none
+        &none  &kp F11     &kp F12     &none        &none        &none                      &none  &none                      &none  &none        &none        &none       &none       &none
+        &trans &none       &none       &none        &none                     &none  &none  &none  &none  &none  &none               &none        &none        &none       &none       &trans
       >;
     };
     mod {
       bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                               &bootloader            &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &macro_ver   &none                                      &none &none                                                        &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none &none      &none      &none &none &none
+        &none &none        &none        &none        &none        &none        &bootloader                                                               &bootloader            &none &none      &none      &none &none &none
+        &none &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none &none      &none      &none &none &none
+        &none &none        &none        &none        &macro_ver   &none                                      &none &none                                                        &none &none      &none      &none &none &none
+        &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                              &bl BL_INC &bl BL_DEC &none &none &none
       >;
     };
   };
