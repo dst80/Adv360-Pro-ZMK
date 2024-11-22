@@ -19,9 +19,9 @@
 };
 
 #define QWERTY 1
-#define GAMING 2
-#define SYM 3
-#define FNDL 4
+#define SYM 2
+#define FNDL 3
+#define GAMING 4
 #define KEYB 5
 
 / {
@@ -70,16 +70,6 @@
         >;
     };
 
-    gaming {
-        bindings = <
-            &none &none &none &none &none &none &tog QWERTY                                        &kp O &kp N1 &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
-            &none &none &none &none &none &none &tog GAMING                                        &kp K &kp P  &kp Q   &kp W   &kp E   &kp R   &kp T
-            &none &none &none &none &none &none &none        &none &none &kp ESC   &kp TAB         &kp L &kp I  &kp A   &hr S   &hr D   &hr F   &kp G
-            &none &none &none &none &none &none                    &none &kp LALT                        &kp M  &kp Y   &kp X   &kp C   &kp V   &kp B
-            &none &none &none &none &none              &none &none &none &kp LSHFT &kp LCTRL &kp SPACE          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
-        >;
-    };
-
     symbols {
         bindings = <
             &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                       &none &kp RS(RA(C)) &kp RA(N5) &kp RS(RA(V))  &kp RA(N9)    &kp RA(N0)     &kp RA(S)
@@ -98,6 +88,17 @@
             &trans &none       &none       &none        &none                     &none  &none  &none  &none  &none  &none               &none        &none        &none       &none       &trans
         >;
     };
+
+    gaming {
+        bindings = <
+            &none &none &none &none &none &none &tog QWERTY                                        &kp O &kp N1 &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
+            &none &none &none &none &none &none &tog GAMING                                        &kp K &kp P  &kp Q   &kp W   &kp E   &kp R   &kp T
+            &none &none &none &none &none &none &none        &none &none &kp ESC   &kp TAB         &kp L &kp I  &kp A   &hr S   &hr D   &hr F   &kp G
+            &none &none &none &none &none &none                    &none &kp LALT                        &kp M  &kp Y   &kp X   &kp C   &kp V   &kp B
+            &none &none &none &none &none              &none &none &none &kp LSHFT &kp LCTRL &kp SPACE          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+        >;
+    };
+
     mod {
         bindings = <
             &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none &none      &none      &none &none &none
