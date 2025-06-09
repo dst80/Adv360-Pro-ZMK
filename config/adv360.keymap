@@ -36,9 +36,9 @@
 
 #define SYM 1
 #define FNDL 2
-#define GAMING 3
-#define NAVKEY 4
-#define NAVMOUSE 5
+#define NAVKEY 3
+#define NAVMOUSE 4
+#define GAMING 5
 #define KEYB 6
 
 / {
@@ -62,9 +62,9 @@
     colemak {
         bindings = <
             &kp EQUAL &kp N1     &kp N2     &kp N3      &kp N4      &kp N5 &mo KEYB                                                                                 &mo KEYB &kp N6 &kp N7      &kp N8      &kp N9       &kp N0     &kp MINUS
-            &kp TAB   &kp Q      &kp W      &kp F       &kp P       &kp G  &none                                                                                    &none    &kp K  &kp L       &kp U       &kp Y        &kp SEMI   &kp BSLH
-            &kp ESC   &hr LGUI A &hr LALT R &hr LCTRL S &hr LSHFT T &kp D  &none                &kp LCTRL   &tog GAMING    &kp RGUI   &kp RCTRL                     &none    &kp H  &hr RSHFT N &hr RCTRL E &hr LALT I   &hr RGUI O &kp SQT
-            &mo FNDL  &kp Z      &hr RALT X &kp C       &kp V       &kp B                                   &kp PG_UP      &kp PG_DN                                         &kp J  &kp M       &kp COMMA   &hr RALT DOT &kp FSLH   &mo FNDL
+            &kp TAB   &kp Q      &kp W      &kp F       &kp P       &kp G  &none                                                                                    &none    &kp H  &kp L       &kp U       &kp Y        &kp SEMI   &kp BSLH
+            &kp ESC   &hr LGUI A &hr LALT R &hr LCTRL S &hr LSHFT T &kp D  &none                &none       &tog GAMING    &none      &none                         &none    &kp M  &hr RSHFT N &hr RCTRL E &hr LALT I   &hr RGUI O &kp SQT
+            &mo FNDL  &kp Z      &hr RALT X &kp C       &kp V       &kp B                                   &kp PG_UP      &kp PG_DN                                         &kp K  &kp J       &kp COMMA   &hr RALT DOT &kp FSLH   &mo FNDL
             &mo FNDL  &kp GRAVE  &kp TILDE  &kp LEFT    &kp RIGHT                &mt LSHFT BSPC &lt SYM DEL &lt NAVKEY ESC &kp TAB    &lt SYM ENTER &mt RSHFT SPACE                 &kp UP      &kp DOWN    &kp LBKT     &kp RBKT   &mo FNDL
         >;
     };
@@ -73,9 +73,9 @@
         bindings = <
             &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                              &none &kp RS(RA(C)) &kp RA(N5)  &kp RS(RA(V))  &kp RA(N9)    &kp RA(N0)    &kp RA(S)
             &none &kp AT         &kp GRAVE     &kp LBKT       &kp RBKT     &kp CARET    &none                                              &none &kp EXCL      &kp LT      &kp GT         &kp EQUAL     &kp COLON     &none
-            &none &hr LGUI BSLH  &hr LALT FSLH &hr LCTRL LBRC &kp RBRC     &kp UNDER    &none        &none &none        &none &none        &none &kp QMARK     &kp LPAR    &hr RCTRL RPAR &hr RALT SEMI &hr RGUI AMPS &none
+            &none &hr LGUI BSLH  &hr LALT FSLH &hr LCTRL LBRC &kp RBRC     &kp UNDER    &none        &none &none        &none &none        &none &kp QMARK     &kp LPAR    &hr RCTRL RPAR &hr LALT SEMI &hr RGUI AMPS &none
             &none &kp HASH       &hr RALT DLLR &kp PIPE       &kp TILDE    &kp STAR                        &none        &none                    &kp PLUS      &kp PRCNT   &kp DQT        &hr RALT APOS &kp MINUS     &none
-            &none &none          &none         &none          &none                           &none &none  &lt NAVMOUSE &none &trans &none                     &none       &none          &none         &none         &none
+            &none &none          &none         &none          &none                           &none &none  &mo NAVMOUSE &none &none &none                      &none       &none          &none         &none         &none
         >;
     };
 
@@ -84,10 +84,10 @@
             &none &none        &none       &none        &none        &none &none                                       &none &none  &none        &none        &none       &none    &none
             &none &kp F12      &kp F7      &kp F8       &kp F9       &none &none                                       &none &none  &kp N7       &kp N8       &kp N9      &none    &none  
             &none &hr LGUI F11 &hr LALT F4 &hr LCTRL N5 &hr LSHFT F6 &none &none        &none &none &none &none        &none &none  &hr RSHFT N4 &hr RCTRL N5 &hr LALT N6 &kp RGUI &none
-            &none &kp F10      &hr RALT F1 &kp F2       &kp F3       &none                    &none &none                    &none  &kp N1       &kp N2       &kp RALT N3 &none    &none
+            &none &kp F10      &hr RALT F1 &kp F2       &kp F3       &none                    &none &none                    &none  &kp N1       &kp N2       &hr RALT N3 &none    &none
             &none &none        &none       &none        &none                     &none &none &none &none &none &none               &kp N0       &kp N0       &kp DOT     &none    &none
         >;
-    }
+    };
 
     navigation_key {
         bindings = <
@@ -95,9 +95,9 @@
             &none &none    &none    &none     &none     &none &none                                              &none &none  &none    &none     &none     &none     &none
             &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none &none               &none &none &none &none        &none &none  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
             &none &none    &kp RALT &none     &none     &none                           &none &none                    &none  &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
-            &none &none    &none    &none     &none                  &none &lt NAVMOUSE &none &none &none &none               &none    &none     &none     &none     &none
+            &none &none    &none    &none     &none                  &none &mo NAVMOUSE &none &none &none &none               &none    &none     &none     &none     &none
         >;
-    }
+    };
 
     navigation_mouse {
         bindings = <
@@ -105,9 +105,9 @@
             &none &none    &none    &none     &none     &none &none                                               &none &none  &none          &none          &none        &none           &none
             &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none &none        &none &none &none &none                &none &none  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &none
             &none &none    &kp RALT &none     &none     &none                    &none &none                            &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none
-            &none &none    &none    &none     &none                  &none &none &none &mkp MB3 &mkp MB1 &Mkp MB2              &none          &none          &none        &none           &none
+            &none &none    &none    &none     &none                  &none &none &none &mkp MB3 &mkp MB1 &mkp MB2              &none          &none          &none        &none           &none
         >;
-    }
+    };
 
     gaming {
         bindings = <
@@ -121,7 +121,7 @@
 
     mod {
         bindings = <
-            &none &none      &none        &none        &none        &none &none                                           &trans      &none &none &none &none &none &none
+            &none &none      &none        &none        &none        &none &none                                           &none       &none &none &none &none &none &none
             &none &bl BL_TOG &none        &bl BL_TOG   &none        &none &bootloader                                     &bootloader &none &none &none &none &none &none
             &none &bl BL_INC &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR   &none &none             &none &none &none &none       &none       &none &none &none &none &none &none
             &none &bl BL_DEC &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none                         &none &none                         &none &none &none &none &none &none
