@@ -62,31 +62,31 @@
    compatible = "zmk,keymap";
    colemak {
        bindings = <
-           &none   &none      &none      &none       &none       &none  &none                                                                                    &mo KEYB &none  &none       &none       &none        &none      &none
-           &kp TAB &kp Q      &kp W      &kp F       &kp P       &kp G  &none                                                                                    &none    &kp H  &kp L       &kp U       &kp Y        &kp SEMI   &kp BSLH
-           &kp ESC &hr LGUI A &hr LALT R &hr LCTRL S &hr LSHFT T &kp D  &none               &none          &tog GAMING      &none      &none                     &none    &kp M  &hr RSHFT N &hr RCTRL E &hr LALT I   &hr RGUI O &kp SQT
-           &none   &kp Z      &hr RALT X &kp C       &kp V       &kp B                                     &none            &none                                         &kp J  &kp K       &kp COMMA   &hr RALT DOT &kp FSLH   &none
-           &none   &none      &none      &kp LEFT    &kp RIGHT                 &lt SYM BSPC &lt NAVKEY ESC &lt NAVMOUSE DEL &lt FN TAB &lt KP ENTER &lt SYM SPACE                &kp DOWN    &kp UP      &none        &none      &none
+           &none   &none      &none      &none       &none       &none  &none                                                                                           &none    &none  &none       &none       &none        &none      &none
+           &kp TAB &kp Q      &kp W      &kp F       &kp P       &kp G  &tog GAMING                                                                                     &mo KEYB &kp H  &kp L       &kp U       &kp Y        &kp SEMI   &kp BSLH
+           &kp ESC &hr LGUI A &hr LALT R &hr LCTRL S &hr LSHFT T &kp D  &mo NAVMOUSE                &none       &none          &none      &none                         &mo FN   &kp M  &hr RSHFT N &hr RCTRL E &hr LALT I   &hr RGUI O &kp SQT
+           &none   &kp Z      &hr RALT X &kp C       &kp V       &kp B                                          &none          &none                                             &kp J  &kp K       &kp COMMA   &hr RALT DOT &kp FSLH   &none
+           &none   &none      &none      &kp LEFT    &kp RIGHT                       &mt LSHFT BSPC &lt SYM ESC &lt NAVKEY DEL &lt KP TAB &lt SYM ENTER &mt RSHFT SPACE                 &kp DOWN    &kp UP      &none        &none      &none
        >;
    };
 
    symbol {
      bindings = <
-       &none &none         &none         &none          &none     &none     &none                                     &none &none     &none     &none          &none         &none         &none
-       &none &kp AT        &kp GRAVE     &kp LBKT       &kp RBKT  &kp CARET &none                                     &none &kp EXCL  &kp LT    &kp GT         &kp PRCNT     &kp COLON     &none
-       &none &hr LGUI BSLH &hr LALT FSLH &hr LCTRL LBRC &kp RBRC  &kp UNDER &none      &none &none &none &none        &none &kp QMARK &kp LPAR  &hr RCTRL RPAR &hr LALT SEMI &hr RGUI AMPS &none
-       &none &kp HASH      &hr RALT DLLR &kp PIPE       &kp TILDE &kp STAR                   &none &none                    &kp PLUS  &kp MINUS &kp EQUAL      &hr RALT DQT  &kp SQT       &none
-       &none &none         &none         &none          &none                    &none &none &none &none &none &none                  &none     &none          &none         &none         &none
+       &none &none         &none         &none          &none     &none     &none                                    &none &none     &none     &none          &none         &none         &none
+       &none &kp AT        &kp GRAVE     &kp LBKT       &kp RBKT  &kp CARET &none                                    &none &kp EXCL  &kp LT    &kp GT         &kp PRCNT     &kp COLON     &none
+       &none &hr LGUI BSLH &hr LALT FSLH &hr LCTRL LBRC &kp RBRC  &kp UNDER &none      &none &none &none &none       &none &kp QMARK &kp LPAR  &hr RCTRL RPAR &hr LALT SEMI &hr RGUI AMPS &none
+       &none &kp HASH      &hr RALT DLLR &kp PIPE       &kp TILDE &kp STAR                   &none &none                   &kp PLUS  &kp MINUS &kp EQUAL      &hr RALT DQT  &kp SQT       &none
+       &none &none         &none         &none          &none                    &none &none &none &none &none &none                 &none     &none          &none         &none         &none
      >;
    };
 
    keypad {
        bindings = <
-           &none &none    &none   &none  &none  &none     &none                                             &none &none  &none     &none     &none    &none    &none
-           &none &kp FSLH &kp N7  &kp N8 &kp N9 &kp MINUS &none                                             &none &none  &none     &none     &none    &none    &none
-           &none &none    &kp N4  &kp N5 &kp N6 &kp EQUAL &none          &none &none     &none &none        &none &none  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &none
-           &none &kp STAR &kp N1  &kp N2 &kp N3 &kp PLUS                       &none     &none                    &none  &none     &none     &kp RALT &none    &none
-           &none &none    &none   &none  &none                  &kp DOT &kp N0 &kp COMMA &none &none &none               &none     &none     &none    &none    &none
+           &none &none    &none   &none  &none  &none     &none                                            &none &none  &none     &none     &none    &none    &none
+           &none &kp FSLH &kp N7  &kp N8 &kp N9 &kp MINUS &none                                            &none &none  &none     &none     &none    &none    &none
+           &none &none    &kp N4  &kp N5 &kp N6 &kp EQUAL &none          &none &none     &none &none       &none &none  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &none
+           &none &kp STAR &kp N1  &kp N2 &kp N3 &kp PLUS                       &none     &none                   &none  &none     &none     &kp RALT &none    &none
+           &none &none    &none   &none  &none                  &kp DOT &kp N0 &kp COMMA &none &none &none              &none     &none     &none    &none    &none
        >;
    };
 
@@ -94,7 +94,7 @@
        bindings = <
            &none &none   &none  &none  &none  &none &none                                     &none &none  &none     &none     &none    &none    &none
            &none &kp F12 &kp F7 &kp F8 &kp F9 &none &none                                     &none &none  &none     &none     &none    &none    &none
-           &none &kp F11 &kp F4 &kp N5 &kp F6 &none &none       &none &none &none &none       &none &none  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &none
+           &none &kp F11 &kp F4 &kp F5 &kp F6 &none &none       &none &none &none &none       &none &none  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &none
            &none &kp F10 &kp F1 &kp F2 &kp F3 &none                   &none &none                   &none  &none     &none     &kp RALT &none    &none
            &none &none   &none  &none  &none              &none &none &none &none &none &none              &none     &none     &none    &none    &none
        >;
