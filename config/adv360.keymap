@@ -35,12 +35,11 @@
 };
 
 #define SYM 1
-#define KP 2
+#define KPD 2
 #define FN 3
-#define NAVKEY 4
-#define NAVMOUSE 5
-#define GAMING 6
-#define KEYB 7
+#define NAV 4
+#define GAMING 5
+#define SYS 6
 
 /{
    behaviors {
@@ -62,81 +61,71 @@
    compatible = "zmk,keymap";
    colemak {
        bindings = <
-           &none   &kp N1     &kp N2     &kp N3      &kp N4      &kp N5 &none                                                                                           &none    &kp N6 &kp N7      &kp N8      &kp N9       &kp N0     &none
-           &kp TAB &kp Q      &kp W      &kp F       &kp P       &kp G  &tog GAMING                                                                                     &mo KEYB &kp K  &kp L       &kp U       &kp Y        &kp SEMI   &kp BSLH
-           &kp ESC &hr LGUI A &hr LALT R &hr LCTRL S &hr LSHFT T &kp D  &mo NAVMOUSE                &none       &none          &none      &none                         &mo FN   &kp H  &hr RSHFT N &hr RCTRL E &hr LALT I   &hr RGUI O &kp SQT
-           &none   &kp Z      &hr RALT X &kp C       &kp V       &kp B                                          &none          &none                                             &kp J  &kp M       &kp COMMA   &hr RALT DOT &kp FSLH   &none
-           &none   &none      &none      &kp LEFT    &kp RIGHT                       &mt LSHFT BSPC &lt SYM ESC &lt NAVKEY DEL &lt KP TAB &lt SYM ENTER &mt RSHFT SPACE                 &kp DOWN    &kp UP      &none        &none      &none
+           &none     &kp N1     &kp N2     &kp N3      &kp N4      &kp N5    &tog GAMING                                                                                  &none  &kp N6    &kp N7      &kp N8      &kp N9       &kp N0     &none
+           &kp TAB   &kp Q      &kp W      &kp F       &kp P       &kp G     &kp GRAVE                                                                                    &none  &kp K     &kp L       &kp U       &kp Y        &kp SEMI   &kp BSLH
+           &kp ESC   &hr LGUI A &hr LALT R &hr LCTRL S &hr LSHFT T &lt NAV D &kp LT                      &none       &none       &none      &none                         &kp GT &lt KPD H &hr RSHFT N &hr RCTRL E &hr LALT I   &hr RGUI O &kp SQT
+           &kp MINUS &kp Z      &hr RALT X &kp C       &kp V       &kp B                                             &none       &none                                           &kp J     &kp M       &kp COMMA   &hr RALT DOT &kp FSLH   &kp EQUAL
+           &none     &none      &none      &kp LEFT    &kp RIGHT                          &mt LSHFT BSPC &lt SYM ESC &lt SYS DEL &lt FN TAB &lt SYM ENTER &mt RSHFT SPACE                  &kp DOWN    &kp UP      &none        &none      &none
        >;
    };
 
    symbol {
      bindings = <
-       &none &none         &none         &none          &none     &none     &none                                    &none &none     &none     &none          &none         &none         &none
-       &none &kp AT        &kp GRAVE     &kp LBKT       &kp RBKT  &kp CARET &none                                    &none &kp EXCL  &kp LT    &kp GT         &kp PRCNT     &kp COLON     &none
-       &none &hr LGUI BSLH &hr LALT FSLH &hr LCTRL LBRC &kp RBRC  &kp UNDER &none      &none &none &none &none       &none &kp QMARK &kp LPAR  &hr RCTRL RPAR &hr LALT SEMI &hr RGUI AMPS &none
-       &none &kp HASH      &hr RALT DLLR &kp PIPE       &kp TILDE &kp STAR                   &none &none                   &kp PLUS  &kp MINUS &kp EQUAL      &hr RALT DQT  &kp SQT       &none
-       &none &none         &none         &none          &none                    &none &none &none &none &none &none                 &none     &none          &none         &none         &none
+       &none &none         &none         &none          &none     &none     &none                                    &none &none     &none     &none          &none          &none         &none
+       &none &kp AT        &kp GRAVE     &kp LBKT       &kp RBKT  &kp CARET &none                                    &none &kp EXCL  &kp LT    &kp GT         &kp EQUAL      &kp COLON     &none
+       &none &hr LGUI BSLH &hr LALT FSLH &hr LCTRL LBRC &kp RBRC  &kp STAR  &none      &none &none &none &none       &none &kp QMARK &kp LPAR  &hr RCTRL RPAR &hr LALT MINUS &hr RGUI SEMI &none
+       &none &kp HASH      &hr RALT DLLR &kp PIPE       &kp TILDE &kp UNDER                  &none &none                   &kp PLUS  &kp PRCNT &kp DQT        &hr RALT SQT   &kp AMPS      &none
+       &none &none         &none         &none          &none                    &none &none &none &none &none &none                 &none     &none          &none          &none         &none
      >;
    };
 
    keypad {
        bindings = <
-           &none &none    &none   &none  &none  &none     &none                                            &none &none  &none     &none     &none    &none    &none
-           &none &kp FSLH &kp N7  &kp N8 &kp N9 &kp MINUS &none                                            &none &none  &none     &none     &none    &none    &none
-           &none &none    &kp N4  &kp N5 &kp N6 &kp EQUAL &none          &none &none     &none &none       &none &none  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &none
-           &none &kp STAR &kp N1  &kp N2 &kp N3 &kp PLUS                       &none     &none                   &none  &none     &none     &kp RALT &none    &none
-           &none &none    &none   &none  &none                  &kp DOT &kp N0 &kp COMMA &none &none &none              &none     &none     &none    &none    &none
+           &none &none     &none   &none  &none  &none     &none                                            &none &none  &none     &none     &none    &none    &none
+           &none &kp FSLH  &kp N7  &kp N8 &kp N9 &kp MINUS &none                                            &none &none  &none     &none     &none    &none    &none
+           &none &kp COMMA &kp N4  &kp N5 &kp N6 &kp PLUS  &none          &none &none     &none &none       &none &none  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &none
+           &none &kp STAR  &kp N1  &kp N2 &kp N3 &kp EQUAL                      &none     &none                   &none  &none     &none     &kp RALT &none    &none
+           &none &none     &none   &none  &none                  &kp N0 &kp DOT &kp ENTER &none &none &none              &none     &none     &none    &none    &none
        >;
    };
 
    fn {
        bindings = <
-           &none &none   &none  &none  &none  &none &none                                     &none &none  &none     &none     &none    &none    &none
-           &none &kp F12 &kp F7 &kp F8 &kp F9 &none &none                                     &none &none  &none     &none     &none    &none    &none
-           &none &kp F11 &kp F4 &kp F5 &kp F6 &none &none       &none &none &none &none       &none &none  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &none
-           &none &kp F10 &kp F1 &kp F2 &kp F3 &none                   &none &none                   &none  &none     &none     &kp RALT &none    &none
-           &none &none   &none  &none  &none              &none &none &none &none &none &none              &none     &none     &none    &none    &none
+           &none &none &none  &none  &none  &none   &none                                     &none &none  &none     &none     &none    &none    &none
+           &none &none &kp F7 &kp F8 &kp F9 &kp F10 &none                                     &none &none  &none     &none     &none    &none    &none
+           &none &none &kp F4 &kp F5 &kp F6 &kp F11 &none     &none &none &none &none         &none &none  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &none
+           &none &none &kp F1 &kp F2 &kp F3 &kp F12                 &none &none                     &none  &none     &none     &kp RALT &none    &none
+           &none &none &none  &none  &none              &none &none &none &none &none &none                &none     &none     &none    &none    &none
        >;
    };
 
    navigation_key {
        bindings = <
-           &none &none    &none    &none     &none     &none &none                                      &none &none  &none    &none     &none     &none     &none
-           &none &none    &none    &none     &none     &none &none                                      &none &none  &none    &none     &none     &none     &none
-           &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none &none       &none &none &none &none        &none &none  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
-           &none &none    &kp RALT &none     &none     &none                   &none &none                    &none  &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
-           &none &none    &none    &none     &none                 &none &none &none &none &none &none               &none    &none     &none     &none     &none
-       >;
-   };
-
-   navigation_mouse {
-       bindings = <
-           &none &none    &none    &none     &none     &none &none                                              &none &none  &none          &none          &none        &none           &none
-           &none &none    &none    &none     &none     &none &none                                              &none &none  &none          &none          &none        &none           &none
-           &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none &none       &none &none &none &none                &none &none  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &none
-           &none &none    &kp RALT &none     &none     &none                   &none &none                            &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none
-           &none &none    &none    &none     &none                 &none &none &none &mkp MB3 &mkp MB1 &mkp MB2              &none          &none          &none        &none           &none
+           &none &none    &none    &none     &none     &none &none                                              &none &none          &none          &none        &none           &none          &none
+           &none &none    &none    &none     &none     &none &none                                              &none &kp HOME       &kp PG_DN      &kp PG_UP    &kp END         &msc SCRL_LEFT &msc SCRL_RIGHT
+           &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none &none       &none &none &none &none                &none &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT       &none          &none
+           &none &none    &kp RALT &none     &none     &none                   &none &none                            &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_DOWN &msc SCRL_UP
+           &none &none    &none    &none     &none                 &none &none &none &mkp MB3 &mkp MB1 &mkp MB2                      &none          &none        &none           &none          &none
        >;
    };
 
    gaming {
        bindings = <
-           &none &none &none &none &none &none &none                                                        &kp K &kp O  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
-           &none &none &none &none &none &none &none                                                        &kp L &kp P  &kp Q   &kp W   &kp E   &kp R   &kp T
-           &none &none &none &none &none &none &none        &none &tog GAMING &kp ESC   &kp TAB             &kp N &kp I  &kp A   &kp S   &kp D   &kp F   &kp G
-           &none &none &none &none &none &none                    &none       &kp LALT                            &kp M  &kp Y   &kp X   &kp C   &kp V   &kp B
-           &none &none &none &none &none              &none &none &none       &kp LSHFT &kp LCTRL &kp SPACE              &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+           &none &none &none &none &none &none &tog GAMING                                             &kp K &kp O  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
+           &none &none &none &none &none &none &none                                                   &kp L &kp P  &kp Q   &kp W   &kp E   &kp R   &kp T
+           &none &none &none &none &none &none &none        &none &none  &kp ESC   &kp TAB             &kp N &kp I  &kp A   &kp S   &kp D   &kp F   &kp G
+           &none &none &none &none &none &none                    &none  &kp LALT                            &kp M  &kp Y   &kp X   &kp C   &kp V   &kp B
+           &none &none &none &none &none              &none &none &none  &kp LSHFT &kp LCTRL &kp SPACE              &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
        >;
    };
 
    mod {
        bindings = <
-           &none &none      &none        &none        &none        &none &none                                           &none       &none &none &none &none &none &none
-           &none &bl BL_TOG &none        &bl BL_TOG   &none        &none &bootloader                                     &bootloader &none &none &none &none &none &none
-           &none &bl BL_INC &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR   &none &none             &none &none &none &none       &none       &none &none &none &none &none &none
-           &none &bl BL_DEC &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none                         &none &none                         &none &none &none &none &none &none
-           &none &none      &none        &none        &none                          &none &none &none &none &none &none                   &none &none &none &none &none
+           &none &none &none &none &none &none &bootloader                                     &bootloader &none      &none      &none      &none &none &none
+           &none &none &none &none &none &none &none                                           &none       &bt BT_CLR &bt BT_PRV &bt BT_NXT &none &none &none
+           &none &none &none &none &none &none &none             &none &none &none &none       &none       &bl BL_TOG &bl BL_DEC &bl BL_INC &none &none &none
+           &none &none &none &none &none &none                         &none &none                         &none      &none      &none      &none &none &none
+           &none &none &none &none &none                   &none &none &none &none &none &none                        &none      &none      &none &none &none
        >;
    };
 
