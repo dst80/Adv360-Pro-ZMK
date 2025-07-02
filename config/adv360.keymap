@@ -71,11 +71,11 @@
    compatible = "zmk,keymap";
    colemak {
        bindings = <
-           &none     &kp N1     &kp N2     &kp N3      &kp N4      &kp N5     &tog GAMING                                                                                  &none  &kp N6     &kp N7      &kp N8      &kp N9       &kp N0     &none
-           &kp TAB   &kp Q      &kp W      &kp F       &kp P       &kp G      &kp GRAVE                                                                                    &none  &kp K      &kp L       &kp U       &kp Y        &kp SEMI   &kp BSLH
-           &kp ESC   &hr LGUI A &hr LALT R &hr LCTRL S &hr LSHFT T &hlt NAV D &kp LT                      &none       &none       &none      &none                         &kp GT &hlt KPD H &hr RSHFT N &hr RCTRL E &hr LALT I   &hr RGUI O &kp SQT
-           &kp MINUS &kp Z      &hr RALT X &kp C       &kp V       &kp B                                              &none       &none                                           &kp J      &kp M       &kp COMMA   &hr RALT DOT &kp FSLH   &kp EQUAL
-           &none     &none      &none      &kp LEFT    &kp RIGHT                           &mt LSHFT BSPC &lt SYM ESC &lt SYS DEL &lt FN TAB &lt SYM ENTER &mt RSHFT SPACE                   &kp DOWN    &kp UP      &none        &none      &none
+           &none     &kp N1     &kp N2     &kp N3      &kp N4      &kp N5     &tog GAMING                                                                                    &none  &kp N6     &kp N7      &kp N8      &kp N9       &kp N0     &none
+           &kp TAB   &kp Q      &kp W      &kp F       &kp P       &kp G      &kp GRAVE                                                                                      &none  &kp K      &kp L       &kp U       &kp Y        &kp SEMI   &kp BSLH
+           &kp ESC   &hr LGUI A &hr LALT R &hr LCTRL S &hr LSHFT T &hlt NAV D &kp LT                      &none        &none       &none      &none                          &kp GT &hlt KPD H &hr RSHFT N &hr RCTRL E &hr LALT I   &hr RGUI O &kp SQT
+           &kp MINUS &kp Z      &hr RALT X &kp C       &kp V       &kp B                                               &none       &none                                            &kp J      &kp M       &kp COMMA   &hr RALT DOT &kp FSLH   &kp EQUAL
+           &none     &none      &none      &kp LEFT    &kp RIGHT                           &mt LSHFT BSPC &hlt SYM ESC &lt SYS DEL &lt FN TAB &hlt SYM ENTER &mt RSHFT SPACE                   &kp DOWN    &kp UP      &none        &none      &none
        >;
    };
 
