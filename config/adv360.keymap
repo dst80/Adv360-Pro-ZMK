@@ -82,11 +82,11 @@
 
     symbols {
         bindings = <
-            &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                       &none &kp RS(RA(C)) &kp RA(N5)  &kp RS(RA(V))  &kp RA(N9)    &kp RA(N0)    &kp RA(S)
-            &none &kp AT         &kp GRAVE     &kp LBKT       &kp RBKT     &kp CARET    &none                                       &none &kp EXCL      &kp LT      &kp GT         &kp EQUAL     &kp COLON     &none
-            &none &hr LGUI BSLH  &hr LALT FSLH &hr LCTRL LBRC &kp RBRC     &kp STAR     &none        &none &none &none &none        &none &kp QMARK     &kp LPAR    &hr RCTRL RPAR &hr LALT SEMI &hr RGUI AMPS &none
-            &none &kp HASH       &hr RALT DLLR &kp PIPE       &kp TILDE    &kp UNDER                       &none &none                    &kp PLUS      &kp PRCNT   &kp DQT        &hr RALT APOS &kp MINUS     &none
-            &none &none          &none         &none          &none                            &none &none &none &none &none &none                      &none       &none          &none         &none         &none
+            &none &kp LS(RA(N1)) &kp RA(N2)    &kp RA(N3)     &kp RA(LBKT) &kp RA(RBKT) &none                                       &none &kp RS(RA(C)) &kp RA(N5)  &kp RS(RA(V))  &kp RA(N9)     &kp RA(N0)     &kp RA(S)
+            &none &kp AT         &kp GRAVE     &kp LBKT       &kp RBKT     &kp CARET    &none                                       &none &kp EXCL      &kp LT      &kp GT         &kp EQUAL      &kp SEMI       &none
+            &none &hr LGUI BSLH  &hr LALT FSLH &hr LCTRL LBRC &kp RBRC     &kp STAR     &none        &none &none &none &none        &none &kp QMARK     &kp LPAR    &hr RCTRL RPAR &hr LALT MINUS &hr RGUI COLON &none
+            &none &kp HASH       &hr RALT DLLR &kp PIPE       &kp TILDE    &kp UNDER                       &none &none                    &kp PLUS      &kp PRCNT   &kp DQT        &hr RALT APOS  &kp AMPS       &none
+            &none &none          &none         &none          &none                            &none &none &none &none &none &none                      &none       &none          &none          &none          &none
         >;
     };
 
